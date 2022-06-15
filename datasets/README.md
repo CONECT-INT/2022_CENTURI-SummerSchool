@@ -1,9 +1,11 @@
-**Dataset 1: Neural signals from macaque motor cortex during a
-center-out reaching task**
+# Dataset 1: Neural signals from macaque motor cortex during a center-out reaching task
 
-*Original paper*: Hatsopoulos, Joshi, and O’Leary. 2004. “Decoding
-Continuous and Discrete Motor Behaviors Using Motor and Premotor
-Cortical Ensembles.” *Journal of Neurophysiology* 92 (2): 1165–74.
+*Original paper*: Hatsopoulos, Joshi, and O’Leary. 2004. “Decoding Continuous and Discrete Motor Behaviors Using Motor and Premotor Cortical Ensembles.” *Journal of Neurophysiology* 92 (2): 1165–74.  [doi:10.1152/jn.01245.2003](https://journals.physiology.org/doi/full/10.1152/jn.01245.2003)
+
+
+<img data-src="https://raw.githubusercontent.com/CONECT-INT/2022_CENTURI-SummerSchool/main/datasets/dataset1_reaching-task/dataset1_fig1.jpeg" height="420" />
+<img data-src="https://raw.githubusercontent.com/CONECT-INT/2022_CENTURI-SummerSchool/main/datasets/dataset1_reaching-task/dataset1_fig4.jpeg" height="420" />
+
 
 *Task*: monkeys were trained to move a cursor toward one of 8 possible
 targets, starting from a central target. The targets were organized in 8
@@ -54,8 +56,7 @@ To get you started:
     that control the x (left-right) and y (up-down) motors of the
     robotic hand. How cool is that?
 
-**Dataset 2: Neural signals from macaque motor cortex during an
-instructed grasping task**
+# Dataset 2: Neural signals from macaque motor cortex during an instructed grasping task
 
 *Original paper*: Brochier, Zehl, Hao, Duret, Sprenger, Denker, Grün, &
 Riehle. 2018. “Massively Parallel Recordings in Macaque Motor Cortex
@@ -146,8 +147,7 @@ To get you started:
     reaction times. Instead of finding the decoding dimension from the
     data, we can pick one and see how well it does.
 
-**Dataset 3: Neural signals from macaque dorsomedial cortex during a
-time interval task**
+# Dataset 3: Neural signals from macaque dorsomedial cortex during a time interval task
 
 *Original paper*: Meirhaeghe, Nicolas, Hansem Sohn, and Mehrdad
 Jazayeri. 2021. “A Precise and Adaptive Neural Mechanism for Predictive
