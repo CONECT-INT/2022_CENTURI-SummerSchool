@@ -3,8 +3,8 @@
 *Original paper*: Hatsopoulos, Joshi, and O’Leary. 2004. “Decoding Continuous and Discrete Motor Behaviors Using Motor and Premotor Cortical Ensembles.” *Journal of Neurophysiology* 92 (2): 1165–74.  [doi:10.1152/jn.01245.2003](https://journals.physiology.org/doi/full/10.1152/jn.01245.2003)
 
 
-<img data-src="dataset1_reaching-task/dataset1_fig1.jpeg" height="2000" />
-<img data-src="dataset1_reaching-task/dataset1_fig4.jpeg" height="200" />
+<img data-src="./dataset1_reaching-task/dataset1_fig1.jpeg" height="2000" />
+<img data-src="./dataset1_reaching-task/dataset1_fig4.jpeg" height="200" />
 
 
 *Task*: monkeys were trained to move a cursor toward one of 8 possible
