@@ -3,7 +3,8 @@
 *Original paper*: Hatsopoulos, Joshi, and O’Leary. 2004. “Decoding Continuous and Discrete Motor Behaviors Using Motor and Premotor Cortical Ensembles.” *Journal of Neurophysiology* 92 (2): 1165–74.  [doi:10.1152/jn.01245.2003](https://journals.physiology.org/doi/full/10.1152/jn.01245.2003)
 
 
-<img src="./dataset1_reaching-task/dataset1_fig1.jpeg" height="400" /> <img src="./dataset1_reaching-task/dataset1_fig4.jpeg" height="400" />
+<img src="./dataset1_reaching-task/centerout-task.png" height="200" />      <img src="./dataset1_reaching-task/trajectories.png" height="200" />
+
 
 *Task*: monkeys were trained to move a cursor toward one of 8 possible
 targets, starting from a central target. The targets were organized in 8
@@ -61,6 +62,8 @@ Riehle. 2018. “Massively Parallel Recordings in Macaque Motor Cortex
 during an Instructed Delayed Reach-to-Grasp Task.” *Scientific Data* 5
 (April): 180055.
 
+<img src="./dataset2_grasping-task/reach2grasp-task.png" height="200" />
+
 *Task*: monkeys were trained to follow an instruction cue to use either
 a side grip (SG) or a precision grip (PG) to grasp an object. The
 instruction cue was presented for 300-ms, followed by a 1-s delay
@@ -81,40 +84,11 @@ trial-by-trial basis.
 
 To get you started:
 
-1)  A good way to start analyzing dynamic neural activity is to
-    visualize it… Make a summary plot with a subplot for each neuron
-    showing the trial-averaged activity of the neuron as a function of
-    time. Use 20-ms non-overlapping windows to bin the spikes. Plot the
-    SG and PG conditions on the same plot in different colors. Use the
-    bootstrap method to compute the confidence intervals. How many
-    neurons would you say encode the grip information? For each
-    grip-encoding neuron, how early in the cue/preparatory period can
-    you decode the grip type?
+1)  A good way to start analyzing dynamic neural activity is to visualize it… Make a summary plot with a subplot for each neuron showing the trial-averaged activity of the neuron as a function of time. Use 20-ms non-overlapping windows to bin the spikes. Additionally, you can smooth the data using a standard Gaussian kernel (SD=40 ms); use the smoother.m helper function if needed. Plot the SG and PG conditions on the same plot in different colors; and add vertical lines to indicate the time of Cue. Use the bootstrap method to compute confidence intervals. How many neurons would you say encode the grip information? For each grip-encoding neuron, how early in the cue/preparatory period can you decode the grip type?
 
-1)  Now zooming out of individual neurons, let’s take a look at the
-    dynamics of the population as a whole. Based on what you learned
-    with dataset 1, you will reduce the dimensions of the data to
-    visualize the dynamics. Use the helper function *PCAneuralData.m* to
-    get you started. At the end of this step, you should have plotted
-    the “neural trajectories” associated with each condition (PG and SG)
-    in the same 3-D plot. How do you interpret the separation of the
-    trajectories as time progresses? Do you think PCA is the best method
-    to explain variance in the time domain? Why or why not?
+1)  Now zooming out of individual neurons, let’s take a look at the dynamics of the population as a whole. Based on what you learned with dataset 1, you will reduce the dimensions of the data to visualize the dynamics. Use the helper function PCAneuralData.m to get you started. At the end of this step, you should have plotted the “neural trajectories” associated with each condition (PG and SG) in the same 3-D plot. How do you interpret the separation of the trajectories as time progresses? Do you think PCA is the best method to explain variance in the time domain? Why or why not?
 
-1)  PCA is an “unsupervised” dimensionality reduction method. If our
-    goal is to focus on the difference in the dynamics between the two
-    conditions (PG and SG), we can use a “supervised” technique. Here,
-    we will use the simplest form of “targeted dimensionality reduction”
-    (TDR) to visualize the data in the dimension that best separates the
-    conditions. To do so, project the two trajectories onto the
-    dimension that connects them at every time point.
-
-1)  Now that you have visualized the high-D data in low-D to get some
-    intuitions, let’s be more quantitative. To estimate how quickly you
-    can decode the grip instruction in the cue/preparatory period,
-    compute the instantaneous euclidean distance between the two
-    trajectories. Perform this calculation both in the 3-D PC space and
-    in the full space (including all neurons). Is there a difference?
+1)  Now that you have visualized the high-D data in low-D to get some intuitions, let’s be more quantitative. To estimate how quickly you can decode the grip instruction in the cue/preparatory period, compute the instantaneous euclidean distance between the two trajectories. Perform this calculation both in the 3-D PC space and in the full space (including all neurons). Is there a difference? 
 
 1)  Finally, let’s build a linear decoder to predict the reaction times
     of the monkey (gathered in the vector *RT*) based on the recorded
@@ -141,10 +115,6 @@ To get you started:
     do the same after shuffling the entries in the vector *RT* to obtain
     a null distribution for the decoding accuracy.
 
-1)  Similarly to dataset 1, we can use a “supervised” method to decode
-    reaction times. Instead of finding the decoding dimension from the
-    data, we can pick one and see how well it does.
-
 # Dataset 3: Neural signals from macaque dorsomedial cortex during a time interval task
 
 *Original paper*: Meirhaeghe, Nicolas, Hansem Sohn, and Mehrdad
@@ -154,3 +124,5 @@ Temporal Processing in the Frontal Cortex.” *Neuron* 109 (18):
 
 *Task*: monkeys were trained to measure various time intervals and
 reproduce them by making saccadic eye movements
+
+Coming soon...
