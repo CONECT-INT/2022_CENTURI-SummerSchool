@@ -42,6 +42,8 @@ To get you started:
     apply to the data before applying PCA, what is it?). Compute the
     amount of the total variance you can explain using 1, 2 or 3
     dimensions (i.e., scree plot)
+    
+1) In the previous step, you applied PCA to explain variance across and within condition. However, we might be more interested to look at the dimensions that explain differences across conditions only. Redo PCA now on the trial-averaged activity (that is, on a matrix of size # neuron x # condition), then project the single-trial data onto the top 2 PCs. What do you notice?     
 
 1)  Let’s visualize the original data in the plane spanned by the top 2
     PCs. How do you interpret the unit vector describing this plane? Do
@@ -54,6 +56,14 @@ To get you started:
     inputs (the firing rate of the 143 neurons) and generates 2 outputs
     that control the x (left-right) and y (up-down) motors of the
     robotic hand. How cool is that?
+ 
+1)  One extra thing: you may have noticed that neurons tend to be active for nearby targets, showing a bell-shaped curve when plotting activity versus  direction. This phenomenon is referred to as “directional tuning”, and was first observed in the 80s by Georgopoulos (1982). To quantify this tuning, we will fit a Von Mises function (equivalent of a Gaussian on a circle) to each neuron individually; see Amirikian & Georgopoulos (2000) if needed. Plot the distribution of the Von Mises parameters (width and mean) across the population. 
+    
+*Resources*
+
+- Understanding PCA: http://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/
+- Original Georgopoulos paper: https://www.jneurosci.org/content/2/11/1527
+- Modeling paper for directional tuning: https://pubmed.ncbi.nlm.nih.gov/10678534/
 
 # Dataset 2: Neural signals from macaque motor cortex during an instructed grasping task
 
