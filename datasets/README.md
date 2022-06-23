@@ -80,12 +80,12 @@ during an Instructed Delayed Reach-to-Grasp Task.” *Scientific Data* 5
 
 *Data format*: dataset2 contains 2 data structures, called *monkeyL* and *monkeyN*. Each structure contains 7 fields:
 - *spikes* is a 3-D tensor [*T*x*N*x*K*] containing the spiking activity of *N* neurons, across *K* trials and *T* times points. Spikes are binned in a 1-ms window (why do you think 1-ms?) and include data between Go-2000ms and Go+3500ms.
-*grip* is vector [*K*x1] containing the grip information for each trial (1 for SG, 2 for PG)
-*force* is vector [*K*x1] containing the force information for each trial (1 for HF, 2 for LF)
-*RT* is a vector [*K*x1] containing the reaction time on each trial (between Go and the switch release)
-*MT* is a vector [*K*x1] containing the movement time on each trial (between the switch release and the object touch)
-*PT* is a vector [*K*x1] containing the pulling time on each trial (between the object touch and the object release)
-*neuron* is a vector [*N*x1] containing the ID of each neuron. 
+- *grip* is vector [*K*x1] containing the grip information for each trial (1 for SG, 2 for PG)
+- *force* is vector [*K*x1] containing the force information for each trial (1 for HF, 2 for LF)
+- *RT* is a vector [*K*x1] containing the reaction time on each trial (between Go and the switch release)
+- *MT* is a vector [*K*x1] containing the movement time on each trial (between the switch release and the object touch)
+- *PT* is a vector [*K*x1] containing the pulling time on each trial (between the object touch and the object release)
+- *neuron* is a vector [*N*x1] containing the ID of each neuron. 
 
 *Goal*: we will analyze preparatory neural activity to dynamically
 decode monkeys’ intended grip and their reaction times on a
