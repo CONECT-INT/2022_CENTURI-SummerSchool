@@ -74,19 +74,17 @@ during an Instructed Delayed Reach-to-Grasp Task.” *Scientific Data* 5
 
 <img src="./dataset2_grasping-task/reach2grasp-task.png" height="200" />
 
-*Task*: monkeys were trained to follow an instruction cue to use either
-a side grip (SG) or a precision grip (PG) to grasp an object. The
-instruction cue was presented for 300-ms, followed by a 1-s delay
-period, and then a Go signal.
+*Task*: Monkeys were trained to grasp an object using 2 possible hand grips (side grip, SG, or precision grip, PG) and subsequently pull and hold the object using 2 possible force levels (low force, LF, or high force, HF). On each trial, the animal had to wait for two successive instructions separated by a 1-s delay before initiating their movement. The grip and force instructions were displayed via a square of 4 light-emitting diodes (LEDs) as follows: the two leftmost (resp., rightmost) LEDs instructed SG (resp., PG), while the top (resp., bottom) LEDs instructed HF (resp., LF).
+*Trial structure*: the animal started from a home position with their working hand pressing down on a pressure-sensitive switch. After a fixed delay, the central LED was illuminated to indicate the start of a new trial. After 400 ms, the grip instruction was presented for 300 ms, followed by a 1-s preparatory period with only the central LED on. At the end of the preparatory period, the force instruction was presented and also served as the imperative GO signal. At that point, the animal needed to (1) release the switch, (2) reach for the object with the appropriate grip and (3) pull and hold it with the appropriate force for 500 ms. The animal was subsequently rewarded if both the grip type and the force level used were correct. To initiate a new trial, the monkey had to return their working hand to the home position and press the switch.
 
-*Data format*: The tensor *D* is a 3-D tensor \[*T*x*N*x*K*\] containing
-the spiking activity of *N=93* neurons, across *K=134* trials and
-*T=1500* times points. Spikes are binned in a 1-ms window (why do you
-think 1-ms?) and include data from 200-ms before the Cue up to the Go
-signal. The vector *RT* \[*K*x1\] contains the reaction times and *GRIP*
-\[*K*x1\] contains the instructed grip type (1 for SG, 2 for PG)
-associated with every trial. Finally, the vector *ID* \[*N*x1\] contains
-the neuron IDs.
+*Data format*: dataset2 contains 2 data structures, called *monkeyL* and *monkeyN*. Each structure contains 7 fields:
+- *spikes* is a 3-D tensor [*T*x*N*x*K*] containing the spiking activity of *N* neurons, across *K* trials and *T* times points. Spikes are binned in a 1-ms window (why do you think 1-ms?) and include data between Go-2000ms and Go+3500ms.
+*grip* is vector [*K*x1] containing the grip information for each trial (1 for SG, 2 for PG)
+*force* is vector [*K*x1] containing the force information for each trial (1 for HF, 2 for LF)
+*RT* is a vector [*K*x1] containing the reaction time on each trial (between Go and the switch release)
+*MT* is a vector [*K*x1] containing the movement time on each trial (between the switch release and the object touch)
+*PT* is a vector [*K*x1] containing the pulling time on each trial (between the object touch and the object release)
+*neuron* is a vector [*N*x1] containing the ID of each neuron. 
 
 *Goal*: we will analyze preparatory neural activity to dynamically
 decode monkeys’ intended grip and their reaction times on a
