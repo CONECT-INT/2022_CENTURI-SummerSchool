@@ -72,7 +72,9 @@ Riehle. 2018. “Massively Parallel Recordings in Macaque Motor Cortex
 during an Instructed Delayed Reach-to-Grasp Task.” *Scientific Data* 5
 (April): 180055.
 
-<img src="./dataset2_grasping-task/reach2grasp-task.png" height="200" />
+<img src="./dataset2_grasping-task/task.png" height="200" />
+
+<img src="./dataset2_grasping-task/task1.png" height="400" />
 
 *Task*: Monkeys were trained to grasp an object using 2 possible hand grips (side grip, SG, or precision grip, PG) and subsequently pull and hold the object using 2 possible force levels (low force, LF, or high force, HF). On each trial, the animal had to wait for two successive instructions separated by a 1-s delay before initiating their movement. The grip and force instructions were displayed via a square of 4 light-emitting diodes (LEDs) as follows: the two leftmost (resp., rightmost) LEDs instructed SG (resp., PG), while the top (resp., bottom) LEDs instructed HF (resp., LF).
 
